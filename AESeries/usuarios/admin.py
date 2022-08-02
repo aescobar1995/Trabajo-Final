@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Binger, Critico
 
-# Register your models here.
+admin.site.register(Binger)
+admin.site.register(Critico)
+
