@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block contenido %}
+{% if serie %}
+
+
+
+{% for serie in serie %}
+    <h3>{{ serie.nombre }}</h3>
+    <div>
+        <p>Codigo: <b>{{ serie.codserie }} || {{ serie.nombre }}</b></p>
+        <p>Temporada:  <b>{{ serie.temporada }}</b></p>
+        <p>Terminada: <b>{{ serie.terminada }}</b></p>
+        <p>Plataforma:  <b>{{ serie.plataforma }}</b></p>
+        <br>
+        {% if serie.imagen %} 
+        <img src="{{serie.imagen.url}}" alt="{{ serie.nombre }}">
+        {% endif %}
+        <p>####################################################################</p>
+    </div> 
+        {% comment %} <li>Tipo:  <b>{{ serie.tipo }}</b></li>
+        <li>Plataforma:  <b>{{ serie.plataforma }}</b></li> {% endcomment %}
+        {% endfor %}
+    
+{% endif %}
+{% endblock contenido %}
+
+

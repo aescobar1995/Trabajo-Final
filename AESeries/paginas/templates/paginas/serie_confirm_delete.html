@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block contenido %}
+    <form method="POST">{% csrf_token %}
+        Estas serguro que deseas eliminar la serie "{{object}}"?
+        <div class="py-4" style="float: right; margin-right: 8px;">
+            <a class="btn btn-outline-secondary" href="{% url 'SerieList' %}"><i class="bi bi-box-arrow-left"></i> Regresar</a>
+            <button class="btn btn-danger" type="submit"><i class="bi bi-trash3">Eliminar</i></button>
+        </div>
+        
+        {% comment %} <input type="submit" value="Eliminar"/> {% endcomment %}
+    </form>
+
+{% endblock contenido %}
