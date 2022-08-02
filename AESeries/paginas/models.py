@@ -15,4 +15,3 @@ class Serie(models.Model):
  
     def __str__(self):
         return f"{self.codserie} || {self.nombre} "
-
