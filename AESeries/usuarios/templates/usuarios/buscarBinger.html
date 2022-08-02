@@ -1,0 +1,7 @@
+{% extends 'layout.html' %}
+{% block contenido %}
+    <form action="/usuarios/buscar/" method="GET">
+        <input type="str" name="nombre" id="nombre">
+        <input type="submit" value="Buscar">
+    </form>
+{% endblock contenido %}

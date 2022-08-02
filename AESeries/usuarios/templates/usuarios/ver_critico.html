@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block contenido %}
+<h1>{{ critico.nombre }} {{ critico.apellido }}</h1>
+<ul>    
+    <li>Email:  <b>{{ critico.email }}</b></li>
+    <li>Alias:  <b>{{ critico.alias }}</b></li>
+    <li>Experiencia: {{ critico.experiencia }}</li>
+</ul>
+<div class="py-4" style="float: right; margin-right: 8px;">
+    <a class="btn btn-outline-secondary" href="{% url 'ListaCriticos' %}">
+    <i class="bi bi-box-arrow-left"></i> Regresar</a>
+</div>
+{% endblock contenido %}

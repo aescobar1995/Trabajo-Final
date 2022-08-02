@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block contenido %}
+
+
+    <center><h1>Registro</h1></center>
+    <form method="POST" style="display: flex; flex-direction: column; max-width: 40vw; margin-inline: auto">
+        {% csrf_token %}
+        {{ form }}
+        <br>
+        <input class="btn btn-secondary" type="submit" value="Guardar">
+    </form>
+{% endblock contenido %} 

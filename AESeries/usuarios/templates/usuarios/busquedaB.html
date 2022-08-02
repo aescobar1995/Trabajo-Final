@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block contenido %}
+    <p>Datos del binger {{nombre}} :</p>
+
+    {% if user %}
+
+    <ul>
+    {% for binger in user %}
+        <li>Alias:  <b>{{ binger.alias }}</b></li>
+        <li>Nombre: <b>{{ binger.nombre }} {{ binger.apellido }}</b></li>
+        <li>Email:  <b>{{ binger.email }}</b></li>
+        <p>************************************</p>
+    {% endfor %}
+    </ul>
+
+    {% endif %}
+    
+{% endblock contenido %}

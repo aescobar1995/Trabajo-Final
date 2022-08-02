@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block contenido %}
+    <h1>Criticos</h1>
+    <div class="py-4" style="float: right; margin-right: 8px;"><a class="btn btn-outline-secondary" href="{% url 'NuevoCritico' %}"><i class="bi bi-person-plus-fill"></i> Nuevo Critico</a></div>
+    {% comment %} <ul style="max-width: 50vw;"> {% endcomment %}
+    <table class="table">
+        {% for critic in criticos %}
+            <tr>
+        
+                <td style="max-width: 200px;"><a href="{% url 'VerCritico' critic.id %}">{{ critic }}</a></td>
+                <td><div style="float: right;">
+                    <a class="btn btn-secondary" href="{% url 'EditarCritico' critic.id %}"><i class="bi bi-pencil-square"></i></a>                               
+                    <a class="btn btn-danger" href="{% url 'EliminarCritico' critic.id %}"><i class="bi bi-trash3"></i></a>
+                </div></td>
+        
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock contenido %}
