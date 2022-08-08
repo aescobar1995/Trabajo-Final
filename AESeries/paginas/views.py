@@ -1,3 +1,4 @@
+import datetime
 from sre_constants import SUCCESS
 from urllib import request
 import django
@@ -12,6 +13,7 @@ from django.views.generic.edit import DeleteView, UpdateView
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin #Necesario si es usa vistas basadas en clases
 from django.contrib.auth import authenticate, login
+
 
 
 def login_request(request):
@@ -47,6 +49,9 @@ def inicio(request):
 def sobremi(request):
     return render(request, "paginas/about.html")
 
+def premiere(request):
+    return render(request, "paginas/premiere.html")
+
 def buscarSerie(request):
     return render(request, "paginas/buscarSerie.html")
 
@@ -64,6 +69,10 @@ def buscarS(request):
 
 
 def serie(request):
+    tvserie = Serie.objects.all()
+    return render(request, "paginas/series.html", {"serie": tvserie})
+
+def premiere(request):
     tvserie = Serie.objects.all()
     return render(request, "paginas/series.html", {"serie": tvserie})
 
@@ -95,6 +104,7 @@ def nueva_serie(request):
     mi_form = FormSerie()
 
     return render(request, "paginas/serie_form.html", {"form": mi_form})
+
 
 
 #Se agregan Vistas basadas en clases

@@ -3,9 +3,11 @@ from . import views
 from django.contrib.auth.views import LogoutView
 
 
+
 urlpatterns = [
     path("", views.inicio, name="Inicio"),
     path("about", views.sobremi, name="About"),
+    path("premiere", views.premiere, name="premiere"),
 
     path("buscarserie", views.buscarSerie, name="BuscarSerie"),
     path("buscar/", views.buscarS, name="BuscarS"),
@@ -14,8 +16,10 @@ urlpatterns = [
     path("login", views.login_request, name="Login"),
     path("logout", LogoutView.as_view(template_name='paginas/logout.html'), name="Logout"),
     
+    
     #CBV con expresiones regulares (regular expression)
     path("series", views.SerieList.as_view(), name="SerieList"),
     re_path(r'^borrar/(?P<pk>\d+)$', views.SerieDelete.as_view(), name='Delete'),
     re_path(r'^editar/(?P<pk>\d+)$', views.SerieUpdate.as_view(), name='Edit'),    
+
 ]
