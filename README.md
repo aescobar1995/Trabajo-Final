@@ -99,7 +99,7 @@ La Base de datos está conformada por:
 | alias | alias o seudónimo |
 | experiencia | experiencia o estudios |
 
-# Tabla de **Bringer**
+# Tabla de **Binger**
 
 |     |     |
 | --- | --- |
@@ -108,6 +108,7 @@ La Base de datos está conformada por:
 | email | email |
 | alias | alias o seudónimo |
 
+# Tabla de **Usuarios administradores y de lectura**
 
 Para los accesos está registrado únicamente un admin y puede registrar tantos usuarios (solo lectura) que desee.
 
