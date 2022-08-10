@@ -122,3 +122,5 @@ Para los accesos está registrado únicamente un admin y puede registrar tantos 
 http://127.0.0.1:8000/admin/
 
 [Link a casos de prueba:] (https://docs.google.com/spreadsheets/d/1hWIUwK0Wkup_opXybnKd3CnJst8E7T_E/edit?usp=sharing&ouid=103579991278749903335&rtpof=true&sd=true)
+
+Link a video: (https://drive.google.com/file/d/1FNCSotp1APqDmO0TRpFAODeNsd-_xbxm/view?usp=sharing)
