@@ -10,7 +10,7 @@ class Serie(models.Model):
     temporada = models.IntegerField()
     terminada = models.BooleanField(null=True, blank=True, default=False)
     sinopsis = models.TextField()
-    imagen=models.ImageField(upload_to = 'series', null=True, blank=True)
+    imagen=models.ImageField(upload_to = 'series', null=True)
 
  
     def __str__(self):
